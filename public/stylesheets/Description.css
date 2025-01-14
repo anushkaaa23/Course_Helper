@@ -1,0 +1,30 @@
+a.coursetype {
+    display: inline-block;  /* Allows applying padding and margin */
+    padding: 10px 20px;      /* Add padding around the link */
+    font-size: 16px;         /* Set font size */
+    font-weight: bold;       /* Make the text bold */
+    text-decoration: none;   /* Remove underline */
+    color:black;           /* Text color */
+    background-color:rgb(105, 198, 148);
+    border-radius: 5px;      /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-align: center;      /* Center text inside the link */
+    margin-top:15px;
+  }
+  
+  /* Hover Effect */
+  a.coursetype:hover {
+    color: #fff;               /* Change text color to white */
+    transform: scale(1.05);     /* Slightly enlarge on hover */
+  }
+  
+  /* Active State */
+  a.coursetype:active {
+    transform: scale(0.98);     /* Slightly shrink on active */
+  }
+  
+  /* Focus State (for accessibility) */
+  a.coursetype:focus {
+    outline-offset: 4px;         /* Offset the outline */
+  }
+  

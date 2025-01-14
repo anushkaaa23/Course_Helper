@@ -1,0 +1,219 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #eef2f3;
+  color: #222;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(to right, #1d3557, #457b9d);
+  color: #f1faee;
+  display: flex;
+  justify-content: space-between; /* Space between header elements */
+  align-items: center;
+  height: 100px; /* Increased height for better spacing */
+  padding: 0 20px; /* Add horizontal padding */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px; /* Larger font size for prominence */
+  font-weight: 700; /* Bold font */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 1.5px; /* Slight spacing for style */
+}
+
+/* Buttons Container in Header */
+.header .buttons-container {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
+.header .button {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  background: #fff;
+  color: #111;
+  border-radius: 8px;
+  display: inline-block;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.header .button:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.header .button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Course Container Styles */
+/* Course Container Styles */
+#courses-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem; /* Slightly increased gap for better spacing */
+  padding: 2rem;
+}
+
+.course-card {
+  background: #ffffff; /* Clean white background for a modern feel */
+  border: 1px solid #e0e0e0; /* Softer border */
+  border-radius: 15px; /* More rounded corners */
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content stays within the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* For decorative elements */
+}
+
+/* Add a subtle top border for uniqueness */
+.course-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(to right, #1d3557, #457b9d);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Hover Effect for Cards */
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: #f9fafc; /* Slight background change on hover */
+}
+
+/* Image Styling */
+.course-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px; /* Slightly rounded image corners */
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.course-card img:hover {
+  transform: scale(1.05); /* Image zoom effect */
+}
+
+/* Title Styling */
+.course-card h2 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  color: #2c3e50;
+  font-weight: bold;
+  text-transform: capitalize; /* Improve readability */
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.course-card:hover h2 {
+  color: #457b9d; /* Change title color on hover */
+}
+
+/* Description Text */
+.course-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Buttons within Course Cards */
+.course-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.course-card a.delete-course {
+  background: #e63946;
+  color: #fff;
+}
+
+.course-card a.delete-course:hover {
+  background: #d62828;
+  transform: scale(1.05);
+}
+
+.course-card a.edit-course {
+  background: #2a9d8f;
+  color: #fff;
+}
+
+.course-card a.edit-course:hover {
+  background: #21867a;
+  transform: scale(1.05);
+}
+
+/* Additional Subtle Differences Between Cards */
+.course-card:nth-child(odd) {
+  background: #fafafa; /* Slightly different background for alternating cards */
+}
+
+.course-card:nth-child(even) {
+  background: #ffffff;
+}
+
+.course-card:nth-child(n) {
+  border-color: #457b9d; /* Different border color every 3rd card */
+}
+
+/* Course Type Link */
+a.coursetype {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #457b9d;
+  color: #f1faee;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 10px 0;
+}
+
+a.coursetype:hover {
+  background-color: #1d3557;
+  transform: scale(1.1);
+}
+
+a.coursetype:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  #courses-container {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  a.coursetype {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Form</title>
+  <link rel="stylesheet" href="/stylesheets/Home.css">
+
+</head>
+<body>
+    <h1 style="display:block; margin-left:50px">All Courses</h1>
+    <a class="coursetype" style="margin-left:50px;" href="/Home">Back To Home</a>
+
+
+    <div id="courses-container"> 
+        <% course.forEach(function(course){ %>
+            
+          <div class="course-card">
+            <img style="width:100%;height:200px;" src="<%= course.image %>" alt="">
+            <h2 style="font-size:16px;"><span style="font-weight:bold; "> Name: </span><%= course.name %></h2>
+            <p style="font-size:16px;"><span style="font-weight:bold;"> Code: </span><%= course.code %></p>
+            <p style="font-size:16px;"><span style="font-weight:bold;"> Credits: </span><%= course.credit %></p>
+            <a style="text-decoration:none;color:black;margin-left:0px;" href="/Description/<%= course._id %>">View Full Description</a>
+
+
+            <div class="button-container">
+           
+                    <a class="edit-course" href="/edit/<%= course._id %>" type="submit">Update</a>       
+                    <a class="delete-course" href="/delete/<%= course._id %>" type="submit">Delete</a>
+            </div>
+        </div>
+    
+        <% })%>
+        </div>
+</body>
+</html>
